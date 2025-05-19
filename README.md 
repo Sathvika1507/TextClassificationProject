@@ -1,0 +1,70 @@
+# 📚 Text Classification using TensorFlow
+
+## 📌 Project Overview
+This project uses **TensorFlow** to build a text classification model that can accurately classify text messages into categories like **Spam** and **Ham**. The project demonstrates the application of **Natural Language Processing (NLP)** techniques combined with **deep learning**.
+
+---
+
+## 🧠 Problem Statement
+The goal is to automatically detect whether a given message is spam or not, which is a classic binary text classification task.
+
+---
+
+## 📂 Dataset Information
+
+- **Dataset Name:** spam.csv  
+- **Source:** [Kaggle - SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
+- **Total Records:** 5,572
+- **Columns:**
+  - `label`: spam or ham
+  - `text`: message content
+
+---
+
+## 🛠️ Tools & Libraries Used
+
+- Python  
+- TensorFlow & Keras  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- NLTK (Natural Language Toolkit)  
+- Scikit-learn  
+
+---
+
+## 🔄 Project Workflow
+
+### 1. Data Preprocessing
+- Loaded and cleaned the dataset
+- Converted labels (`spam`, `ham`) into numerical format (1 and 0)
+- Tokenized text data using `Tokenizer` from Keras
+- Applied padding using `pad_sequences`
+- Split data into train and test sets (80/20)
+
+### 2. Model Building
+- Used a **Sequential** model with the following layers:
+  - Embedding layer
+  - GlobalAveragePooling1D
+  - Dense layers with ReLU and Sigmoid
+- Used **Binary Crossentropy** as the loss function
+- Optimizer: **Adam**
+
+### 3. Model Training
+- Trained the model for 10–20 epochs (based on tuning)
+- Used 10% validation split
+- Tracked accuracy and loss
+
+### 4. Model Evaluation
+- Calculated accuracy, precision, recall, and F1-score
+- Plotted confusion matrix and training graphs
+- Achieved **97.49% accuracy**
+
+---
+
+## 📊 Results
+
+- ✅ **Test Accuracy:** 97.49%
+- 🎯 High performance in detecting spam with minimal false positives
+
+---
+
